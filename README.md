@@ -5,6 +5,28 @@
 
 `node src/cli.js sample-code\example.js`
 ```
+############################################################################
+
+### **How It Works:**
+
+1.  **Metrics Collection**:
+
+    -   **Cyclomatic Complexity**: Counts decision points using AST traversal.
+    -   **Comments-to-Code Ratio**: Compares comment lines to code lines using Esprima's comment extractor.
+    -   **Lint Errors**: Uses ESLint to count coding standard violations.
+    -   **Duplication**: Identifies repetitive AST node structures.
+2.  **Normalization**:
+
+    -   Raw metric values are converted into a 0--10 scale.
+3.  **Weighted Calculation**:
+
+    -   Combines normalized scores using predefined weights for a final cleanliness score.
+4.  **Report**:
+
+    -   Outputs metrics, scores, and a final cleanliness score to the console.
+
+
+############################################################################
 
 ### ** Algorithm for Code Cleanliness Calculation**
 
